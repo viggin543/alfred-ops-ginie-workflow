@@ -35,7 +35,7 @@ data class Paging(val next: String, val first: String, val last: String)
 data class OpsGinieResponce(val data: List<Alert>, val paging: Paging, val took: Double, val requestId: String)
 
 @Serializable
-data class AlfredIcon(val type: String, val path: String)
+data class AlfredIcon(val type: String="", val path: String)
 
 @Serializable
 data class  AlfredMode(val valid: Boolean, val arg: String, val subtitle: String)
@@ -51,8 +51,10 @@ data class AlfredItem(
     val arg: String,
     val autocomplete: String,
     val icon: AlfredIcon,
-    val valid: Boolean,
-    val mods: AlfredMods
+    val valid: Boolean
+//    val mods: AlfredMods
 )
+@Serializable
+data class AlfredItems(val items: List<AlfredItem>)
 
 
