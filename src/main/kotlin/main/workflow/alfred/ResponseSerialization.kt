@@ -23,6 +23,7 @@ data class AlfredItem(
     val autocomplete: String,
     val icon: AlfredIcon,
     val valid: Boolean,
+    val quicklookurl: String,
     val text:AlfredItemText
 
 )

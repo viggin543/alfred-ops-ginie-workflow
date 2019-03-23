@@ -13,18 +13,22 @@ class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
 
-    fun run(args: List<String>) =
-        AlfredItems(opsGinieClient.getAlerts().data.map {
+    fun run(args: List<String>): AlfredItems {
+
+        val alfredItems = AlfredItems(opsGinieClient.getAlerts().data.map {
             AlfredItem(
                 uid = it.tinyId,
                 title = it.message,
                 subtitle = it.alias,
                 arg = it.source,
                 autocomplete = it.message,
+                quicklookurl = "https://app.opsgenie.com/alert/detail/${it.id}/details",
                 icon = AlfredIcon(path = "/Users/domrevigor/personal_projects/ops/src/main/resources/opsgenie.jpg"),
                 valid = true,
-                text = AlfredItemText(it.message)
+                text = AlfredItemText("https://app.opsgenie.com/alert/detail/${it.id}/details")
             )
         })
-
+        log.info("listing ${alfredItems.items.size} alerts")
+        return alfredItems
+    }
 }

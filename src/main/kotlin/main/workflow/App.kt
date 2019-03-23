@@ -10,16 +10,22 @@ object App {
     private val log = LoggerFactory.getLogger(App::class.java)!!
     @JvmStatic
     fun main(args: Array<String>) {
-        log.info("starting workflow with args ${args.toList()}")
+        val argsList = args.toList()
+        log.info("starting workflow with args $argsList")
 
         val workflow = Guice.createInjector(WorkflowModule())
             .getInstance(Workflow::class.java)
 
-        println(
-            Json.stringify(
-                AlfredItems.serializer(),
-                workflow.run(args.toList())
+
+        when {
+            argsList.isEmpty() ->  println(
+                Json.stringify(
+                    AlfredItems.serializer(),
+                    workflow.run(argsList)
+                )
             )
-        )
+            argsList.isNotEmpty() -> log.info("da ${argsList.size} ${argsList.last()}")
+
+        }
     }
 }

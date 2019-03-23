@@ -23,16 +23,11 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" afterDir="false" />
+    <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="adding some tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/data/ResponseSerialization.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -99,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="432">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#277#0" expanded="true" />
               </folding>
@@ -109,10 +104,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/kotlin_in_actionr.kts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="104" column="4" selection-start-line="104" selection-end-line="104" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="177">
+              <caret line="27" column="95" lean-forward="true" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="95" />
               <folding>
                 <element signature="e#23#294#0" expanded="true" />
               </folding>
@@ -121,19 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/WorkflowModule.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            <state relative-caret-position="258">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
               <folding>
                 <element signature="e#24#222#0" expanded="true" />
               </folding>
@@ -165,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="174">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="e#27#243#0" expanded="true" />
               </folding>
@@ -175,19 +179,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="318">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -218,6 +213,7 @@
       <find>log</find>
       <find>compile</find>
       <find>runtime</find>
+      <find>when</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,13 +251,13 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/data/ResponseSerialization.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" />
       </list>
     </option>
   </component>
@@ -377,6 +373,15 @@
               <item name="mockito-kotlin-2.1.0.jar" type="462c0819:PsiDirectoryNode" />
               <item name="mockitokotlin2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -393,7 +398,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553319286952" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553321037367" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;Groovy" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -448,7 +453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WorkflowTest.filter alerts by workflow args">
+  <component name="RunManager" selected="Gradle.ops [publish]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -901,7 +906,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37284000" />
+    <option name="totallyTimeSpent" value="38702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -928,7 +933,7 @@
       <window_info anchor="bottom" id="Quokka" order="10" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="SonarLint" order="13" />
+      <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32977587" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32977587" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Version Control" order="16" weight="0.3180363" />
@@ -1020,16 +1025,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="using guice like a bosssss" />
-    <option name="LAST_COMMIT_MESSAGE" value="using guice like a bosssss" />
+    <MESSAGE value="adding some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding some tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/kotlin_in_actionr.kts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/CompletableFuture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1062,81 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="7" column="57" selection-end-line="421" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_8.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#1253#2476#0" />
-            <element signature="e#1703#1793#0" />
-            <element signature="e#2089#2173#0" />
-            <element signature="e#2099#2165#0" />
-            <element signature="e#2195#2331#0" />
-            <element signature="e#2205#2323#0" />
-            <element signature="e#2354#2470#0" />
-            <element signature="e#2482#3700#0" />
-            <element signature="e#2928#3018#0" />
-            <element signature="e#3313#3397#0" />
-            <element signature="e#3323#3389#0" />
-            <element signature="e#3419#3555#0" />
-            <element signature="e#3429#3547#0" />
-            <element signature="e#3578#3694#0" />
-            <element signature="e#3706#4939#0" />
-            <element signature="e#4166#4256#0" />
-            <element signature="e#4552#4636#0" />
-            <element signature="e#4562#4628#0" />
-            <element signature="e#4658#4794#0" />
-            <element signature="e#4668#4786#0" />
-            <element signature="e#4817#4933#0" />
-            <element signature="e#4945#6173#0" />
-            <element signature="e#5401#5491#0" />
-            <element signature="e#5786#5870#0" />
-            <element signature="e#5796#5862#0" />
-            <element signature="e#5892#6028#0" />
-            <element signature="e#5902#6020#0" />
-            <element signature="e#6051#6167#0" />
-            <element signature="e#6179#7402#0" />
-            <element signature="e#6629#6719#0" />
-            <element signature="e#7015#7099#0" />
-            <element signature="e#7025#7091#0" />
-            <element signature="e#7121#7257#0" />
-            <element signature="e#7131#7249#0" />
-            <element signature="e#7280#7396#0" />
-            <element signature="e#7408#8635#0" />
-            <element signature="e#7864#7954#0" />
-            <element signature="e#8248#8332#0" />
-            <element signature="e#8258#8324#0" />
-            <element signature="e#8354#8490#0" />
-            <element signature="e#8364#8482#0" />
-            <element signature="e#8513#8629#0" />
-            <element signature="e#8641#9804#0" />
-            <element signature="e#9031#9121#0" />
-            <element signature="e#9417#9501#0" />
-            <element signature="e#9427#9493#0" />
-            <element signature="e#9523#9659#0" />
-            <element signature="e#9533#9651#0" />
-            <element signature="e#9682#9798#0" />
-            <element signature="e#9810#11003#0" />
-            <element signature="e#10222#10308#0" />
-            <element signature="e#10616#10700#0" />
-            <element signature="e#10626#10692#0" />
-            <element signature="e#10722#10858#0" />
-            <element signature="e#10732#10850#0" />
-            <element signature="e#10881#10997#0" />
-            <element signature="e#11009#12383#0" />
-            <element signature="e#11413#11499#0" />
-            <element signature="e#11792#11952#0" />
-            <element signature="e#11802#11868#0" />
-            <element signature="e#11878#11944#0" />
-            <element signature="e#11974#12238#0" />
-            <element signature="e#11984#12102#0" />
-            <element signature="e#12112#12230#0" />
-            <element signature="e#12261#12377#0" />
-            <element signature="n#!!block;n#paging#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,13 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/classes/main/Alert.class" />
     <entry file="jrt:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home!/java.desktop/sun/awt/image/BufferedImageDevice.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1225,13 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5670">
           <caret line="219" column="25" selection-start-line="219" selection-start-column="25" selection-end-line="219" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1372,27 +1282,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#277#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1413,32 +1306,145 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="174">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="e#27#243#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_8.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding>
-            <element signature="e#23#294#0" expanded="true" />
+            <element signature="e#1253#2476#0" />
+            <element signature="e#1703#1793#0" />
+            <element signature="e#2089#2173#0" />
+            <element signature="e#2099#2165#0" />
+            <element signature="e#2195#2331#0" />
+            <element signature="e#2205#2323#0" />
+            <element signature="e#2354#2470#0" />
+            <element signature="e#2482#3700#0" />
+            <element signature="e#2928#3018#0" />
+            <element signature="e#3313#3397#0" />
+            <element signature="e#3323#3389#0" />
+            <element signature="e#3419#3555#0" />
+            <element signature="e#3429#3547#0" />
+            <element signature="e#3578#3694#0" />
+            <element signature="e#3706#4939#0" />
+            <element signature="e#4166#4256#0" />
+            <element signature="e#4552#4636#0" />
+            <element signature="e#4562#4628#0" />
+            <element signature="e#4658#4794#0" />
+            <element signature="e#4668#4786#0" />
+            <element signature="e#4817#4933#0" />
+            <element signature="e#4945#6173#0" />
+            <element signature="e#5401#5491#0" />
+            <element signature="e#5786#5870#0" />
+            <element signature="e#5796#5862#0" />
+            <element signature="e#5892#6028#0" />
+            <element signature="e#5902#6020#0" />
+            <element signature="e#6051#6167#0" />
+            <element signature="e#6179#7402#0" />
+            <element signature="e#6629#6719#0" />
+            <element signature="e#7015#7099#0" />
+            <element signature="e#7025#7091#0" />
+            <element signature="e#7121#7257#0" />
+            <element signature="e#7131#7249#0" />
+            <element signature="e#7280#7396#0" />
+            <element signature="e#7408#8635#0" />
+            <element signature="e#7864#7954#0" />
+            <element signature="e#8248#8332#0" />
+            <element signature="e#8258#8324#0" />
+            <element signature="e#8354#8490#0" />
+            <element signature="e#8364#8482#0" />
+            <element signature="e#8513#8629#0" />
+            <element signature="e#8641#9804#0" />
+            <element signature="e#9031#9121#0" />
+            <element signature="e#9417#9501#0" />
+            <element signature="e#9427#9493#0" />
+            <element signature="e#9523#9659#0" />
+            <element signature="e#9533#9651#0" />
+            <element signature="e#9682#9798#0" />
+            <element signature="e#9810#11003#0" />
+            <element signature="e#10222#10308#0" />
+            <element signature="e#10616#10700#0" />
+            <element signature="e#10626#10692#0" />
+            <element signature="e#10722#10858#0" />
+            <element signature="e#10732#10850#0" />
+            <element signature="e#10881#10997#0" />
+            <element signature="e#11009#12383#0" />
+            <element signature="e#11413#11499#0" />
+            <element signature="e#11792#11952#0" />
+            <element signature="e#11802#11868#0" />
+            <element signature="e#11878#11944#0" />
+            <element signature="e#11974#12238#0" />
+            <element signature="e#11984#12102#0" />
+            <element signature="e#12112#12230#0" />
+            <element signature="e#12261#12377#0" />
+            <element signature="n#!!block;n#paging#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/kotlin_in_actionr.kts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        <state relative-caret-position="155">
+          <caret line="104" column="4" selection-start-line="104" selection-end-line="104" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#24#222#0" expanded="true" />
+            <element signature="e#0#277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="27" column="95" lean-forward="true" selection-start-line="27" selection-start-column="95" selection-end-line="27" selection-end-column="95" />
+          <folding>
+            <element signature="e#23#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
