@@ -1,4 +1,4 @@
-package main
+package main.workflow.data
 
 import kotlinx.serialization.Serializable
 
@@ -41,7 +41,7 @@ data class AlfredIcon(val type: String="", val path: String)
 data class  AlfredMode(val valid: Boolean, val arg: String, val subtitle: String)
 
 @Serializable
-data class AlfredMods(val alt: AlfredMode,val cmd: AlfredMode,val ctrl: AlfredMode )
+data class AlfredMods(val alt: AlfredMode, val cmd: AlfredMode, val ctrl: AlfredMode)
 
 @Serializable
 data class AlfredItem(

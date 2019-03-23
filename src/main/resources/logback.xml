@@ -1,6 +1,6 @@
 <configuration>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>app.log</file>
+        <file>workflow.log</file>
         <encoder>
             <pattern>%d{HH:mm:ss} %-5p [%c] - %m%n</pattern>
         </encoder>

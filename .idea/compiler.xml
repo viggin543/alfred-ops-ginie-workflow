@@ -4,6 +4,12 @@
     <bytecodeTargetLevel>
       <module name="com.innovid.cf.1.main" target="11" />
       <module name="com.innovid.cf.1.test" target="11" />
+      <module name="com.innovid.cf.ops.main" target="11" />
+      <module name="com.innovid.cf.ops.test" target="11" />
+      <module name="com.viggin.alfredß.ops.main" target="11" />
+      <module name="com.viggin.alfredß.ops.test" target="11" />
+      <module name="com.viggin.cf.ops.main" target="11" />
+      <module name="com.viggin.cf.ops.test" target="11" />
       <module name="ops.1.main" target="11" />
       <module name="ops.1.test" target="11" />
     </bytecodeTargetLevel>

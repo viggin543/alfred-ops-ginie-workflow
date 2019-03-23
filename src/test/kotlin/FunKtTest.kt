@@ -1,8 +1,9 @@
-import main.api.OpsGinieClient
-import main.OpsGinieResponce
+import main.workflow.api.OpsGinieClient
+import main.workflow.data.OpsGinieResponce
 import kotlinx.serialization.json.Json
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
+import org.junit.Test
+import kotlin.test.assertNotNull
+
 
 internal class FunKtTest {
 

@@ -1,4 +1,4 @@
-package main.api
+package main.workflow.api
 
 import java.net.URI
 import java.net.URLEncoder
