@@ -1,6 +1,6 @@
-import main.workflow.api.OpsGinieClient
-import main.workflow.data.OpsGinieResponce
+import main.workflow.opsGinieApi.OpsGinieClient
 import kotlinx.serialization.json.Json
+import main.workflow.opsGinieApi.OpsGinieResponce
 import org.junit.Test
 import kotlin.test.assertNotNull
 
@@ -11,10 +11,8 @@ internal class FunKtTest {
     @Test
     fun `can parse real response`() {
 
-        val jsonResponse = Json.nonstrict.parse(
-            OpsGinieResponce.serializer(),
-            OpsGinieClient().getAlerts().body()
-        )
+        val jsonResponse =
+            OpsGinieClient().getAlerts()
 
         assertNotNull(jsonResponse)
     }

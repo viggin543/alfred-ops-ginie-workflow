@@ -36,11 +36,13 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
-    testImplementation "org.jetbrains.kotlin:kotlin-test"
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
     compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
 }
 
 application {
@@ -55,14 +57,14 @@ clean {
 
 task('publish') {
     dependsOn 'installDist'
-    description 'publishing workflow to -> ~/alfred_sync/Alfred.alfredpreferences/workflows/ops_ginie'
+    description 'publishing workflow to -> ~/alfred_sync/Alfred.alfredpreferences/workflows/user.workflow.ops_ginie'
     doFirst {
         copy {
-            delete "$System.env.HOME/alfred_sync/Alfred.alfredpreferences/workflows/ops_ginie/dist"
+            delete "$System.env.HOME/alfred_sync/Alfred.alfredpreferences/workflows/user.workflow.ops_ginie/dist"
             from("$buildDir") {
                 include "install/**"
             }
-            into "$System.env.HOME/alfred_sync/Alfred.alfredpreferences/workflows/ops_ginie/dist"
+            into "$System.env.HOME/alfred_sync/Alfred.alfredpreferences/workflows/user.workflow.ops_ginie/dist"
         }
     }
 }

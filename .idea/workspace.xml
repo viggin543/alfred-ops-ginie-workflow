@@ -24,10 +24,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/data/ResponseSerialization.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -85,20 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#176#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="185">
+              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -106,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+            <state relative-caret-position="232">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="e#0#277#0" expanded="true" />
               </folding>
@@ -115,55 +108,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#23#350#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.2.2/ffd85e2a6ab1f015b16fc766ced990fd260024a4/guice-4.2.2-sources.jar!/com/google/inject/Inject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <element signature="e#23#294#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,6 +125,69 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+              <folding>
+                <element signature="e#24#222#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/OngoingStubbing.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+              <folding>
+                <element signature="e#27#243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -233,12 +248,20 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/main/WorkflowModule.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/api/OpsGinieClient.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/App.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/workflow.log" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/api/serialization.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/data/ResponseSerialization.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" />
       </list>
     </option>
   </component>
@@ -250,7 +273,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="834" />
     <option name="height" value="1050" />
   </component>
@@ -295,25 +318,64 @@
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+              <item name="alfred" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+              <item name="opsGinieApi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.google.inject:guice:4.2.2" type="70bed36:NamedLibraryElementNode" />
+              <item name="Gradle: com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.google.inject:guice:4.2.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="guice-4.2.2.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="Gradle: com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-kotlin-2.1.0.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.google.inject:guice:4.2.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="guice-4.2.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="inject" type="462c0819:PsiDirectoryNode" />
+              <item name="Gradle: com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-kotlin-2.1.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockitokotlin2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,9 +390,10 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553314922718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553319286952" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;Groovy" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -345,6 +408,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="main.workflow" />
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -384,7 +448,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ops [run]">
+  <component name="RunManager" selected="JUnit.WorkflowTest.filter alerts by workflow args">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -415,25 +479,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ops [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="ops [distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -511,6 +556,23 @@
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="WorkflowTest.filter alerts by workflow args" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.viggin.alfred.ops.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.workflow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.workflow" />
+      <option name="MAIN_CLASS_NAME" value="main.workflow.WorkflowTest" />
+      <option name="METHOD_NAME" value="filter alerts by workflow args" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -740,11 +802,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ops [run]" />
+        <item itemvalue="JUnit.WorkflowTest.filter alerts by workflow args" />
         <item itemvalue="Gradle.ops [publish]" />
+        <item itemvalue="Gradle.ops [run]" />
         <item itemvalue="Gradle.ops [installDist]" />
         <item itemvalue="Gradle.ops [distZip]" />
-        <item itemvalue="Gradle.ops [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -796,42 +858,50 @@
       <workItem from="1553114829353" duration="3357000" />
       <workItem from="1553184744027" duration="4822000" />
     </task>
+    <task id="LOCAL-00001" summary="using guice like a bosssss">
+      <created>1553314955710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553314955711</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FunKtTest_can_parse_real_response - 2019.03.20 at 09h 07m 29s.xml">
-      <configuration name="FunKtTest.can parse real response" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.20 at 22h 47m 37s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 28m 52s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 29m 07s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 29m 17s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 29m 34s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 30m 57s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 31m 02s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunKtTest - 2019.03.21 at 06h 32m 32s.xml">
-      <configuration name="FunKtTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FunKtTest - 2019.03.22 at 20h 37m 38s.xml">
       <configuration name="FunKtTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 22m 49s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 23m 25s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 23m 44s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 27m 45s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 31m 11s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 31m 39s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 32m 31s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 33m 15s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WorkflowTest_filter_alerts_by_workflow_args - 2019.03.23 at 07h 34m 39s.xml">
+      <configuration name="WorkflowTest.filter alerts by workflow args" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33796000" />
+    <option name="totallyTimeSpent" value="37284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -861,7 +931,7 @@
       <window_info anchor="bottom" id="SonarLint" order="13" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32977587" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.55496264" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3180363" />
       <window_info anchor="bottom" id="TeamCity" order="17" />
       <window_info anchor="bottom" id="Messages" order="18" weight="0.32977587" />
       <window_info active="true" anchor="bottom" id="Database Console" order="19" visible="true" weight="0.32988626" />
@@ -948,22 +1018,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="using guice like a bosssss" />
+    <option name="LAST_COMMIT_MESSAGE" value="using guice like a bosssss" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradlew.bat" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27510">
-          <caret line="970" column="25" selection-start-line="970" selection-start-column="25" selection-end-line="970" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/khttp/khttp/0.1.0/8ecf1d70e7366b87ffb4133cf1dbe45fed572599/khttp-0.1.0-sources.jar!/khttp/responses/Response.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/kotlin_in_actionr.kts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1244,13 +1303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/data/ResponseSerialization.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-all/54ye4nru8k2rpf7xwj15he4fo/gradle-4.10/src/plugins/org/gradle/api/plugins/ApplicationPluginConvention.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1272,13 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/api/OpsGinieClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1293,25 +1338,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/WorkflowModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
@@ -1323,13 +1351,6 @@
     <entry file="file://$PROJECT_DIR$/workflow.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/4.2.2/ffd85e2a6ab1f015b16fc766ced990fd260024a4/guice-4.2.2-sources.jar!/com/google/inject/Inject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -1337,22 +1358,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/WorkflowModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        <state relative-caret-position="232">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="e#0#277#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/FunKtTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/OngoingStubbing.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="e#27#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="180">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
-            <element signature="e#23#350#0" expanded="true" />
+            <element signature="e#23#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding>
+            <element signature="e#24#222#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1360,8 +1446,8 @@
   </component>
   <component name="gradleExecuteTaskHistory">
     <option value="$PROJECT_DIR$" />
-    <option value="run" />
     <option value="publish" />
+    <option value="run" />
     <option value="installDist" />
     <option value="clean" />
     <option value="distZip" />
