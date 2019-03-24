@@ -21,10 +21,16 @@ object App {
             argsList.isEmpty() ->  println(
                 Json.stringify(
                     AlfredItems.serializer(),
-                    workflow.run(argsList)
+                    workflow.listAlerts()
                 )
             )
-            argsList.isNotEmpty() -> log.info("da ${argsList.size} ${argsList.last()}")
+            argsList.isNotEmpty() -> println(
+                Json.stringify(
+                    AlfredItems.serializer(),
+                    workflow.listFilteredAlerts(argsList)
+                )
+            )
+
 
         }
     }

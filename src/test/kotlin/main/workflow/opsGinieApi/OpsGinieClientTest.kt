@@ -1,18 +1,34 @@
-import main.workflow.opsGinieApi.OpsGinieClient
+package main.workflow.opsGinieApi
+
 import kotlinx.serialization.json.Json
-import main.workflow.opsGinieApi.OpsGinieResponce
+import org.junit.After
+import org.junit.Before
 import org.junit.Test
+import java.io.File
 import kotlin.test.assertNotNull
 
 
-internal class FunKtTest {
+internal class OpsGinieClientTest {
 
 
+    @After
+    fun tearDown() {
+        clean()
+    }
+
+    @Before
+    fun setUp() {
+        clean()
+    }
+
+    private fun clean() {
+        File("cached_OpsGinieResponce.json").delete()
+    }
     @Test
     fun `can parse real response`() {
 
         val jsonResponse =
-            OpsGinieClient().getAlerts()
+            OpsGinieClient(Cache()).getAlerts()
 
         assertNotNull(jsonResponse)
     }

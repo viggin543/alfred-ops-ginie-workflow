@@ -1,6 +1,7 @@
 package main.workflow.opsGinieApi
 
 
+import kotlinx.serialization.Optional
 import kotlinx.serialization.Serializable
 
 
@@ -30,7 +31,7 @@ data class Alert(
 )
 
 @Serializable
-data class Paging(val next: String, val first: String, val last: String)
+data class Paging(@Optional val next: String = "", val first: String, val last: String)
 
 @Serializable
 data class OpsGinieResponce(val data: List<Alert>,
