@@ -15,17 +15,21 @@ class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
 
     fun run(args: List<String>): AlfredItems {
 
-        val alfredItems = AlfredItems(opsGinieClient.getAlerts().data.map {
+        val alfredItems = AlfredItems(opsGinieClient.getAlerts().data
+            .filter { args.isEmpty() || it.message.contains(args.last()) }
+            .map {
+            val alertUrl = "https://app.opsgenie.com/alert/detail/${it.id}/details"
+            log.info("arg is -> $alertUrl")
             AlfredItem(
                 uid = it.tinyId,
                 title = it.message,
                 subtitle = it.alias,
-                arg = it.source,
+                arg = alertUrl,
                 autocomplete = it.message,
-                quicklookurl = "https://app.opsgenie.com/alert/detail/${it.id}/details",
+                quicklookurl = alertUrl,
                 icon = AlfredIcon(path = "/Users/domrevigor/personal_projects/ops/src/main/resources/opsgenie.jpg"),
                 valid = true,
-                text = AlfredItemText("https://app.opsgenie.com/alert/detail/${it.id}/details")
+                text = AlfredItemText(alertUrl)
             )
         })
         log.info("listing ${alfredItems.items.size} alerts")

@@ -25,7 +25,6 @@ data class AlfredItem(
     val valid: Boolean,
     val quicklookurl: String,
     val text:AlfredItemText
-
 )
 @Serializable
 data class AlfredItems(val items: List<AlfredItem>)
