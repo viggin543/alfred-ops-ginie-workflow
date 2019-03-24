@@ -23,12 +23,8 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="adding some tests">
+    <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/ResponseSerialization.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -146,8 +142,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="303">
+              <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
               <folding>
                 <element signature="e#24#198#0" expanded="true" />
               </folding>
@@ -270,7 +266,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="834" />
     <option name="height" value="1050" />
   </component>
@@ -425,7 +421,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553414928244" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553414955240" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;Groovy" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -894,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553314955711</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding some tests">
+      <created>1553414936727</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553414936727</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -930,7 +933,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43424000" />
+    <option name="totallyTimeSpent" value="43730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -946,7 +949,7 @@
       <window_info id="Favorites" order="7" sideWeight="0.50239235" side_tool="true" weight="0.14731051" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.459152" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.459152" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -957,10 +960,10 @@
       <window_info anchor="bottom" id="Quokka" order="10" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32977587" />
+      <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32885212" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32977587" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3180363" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="16" visible="true" weight="0.31747672" />
       <window_info anchor="bottom" id="TeamCity" order="17" />
       <window_info anchor="bottom" id="Messages" order="18" weight="0.32977587" />
       <window_info active="true" anchor="bottom" id="Database Console" order="19" visible="true" weight="0.32988626" />
@@ -1465,8 +1468,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="303">
+          <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
           <folding>
             <element signature="e#24#198#0" expanded="true" />
           </folding>
