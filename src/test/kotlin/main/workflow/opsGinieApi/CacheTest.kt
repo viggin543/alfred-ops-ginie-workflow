@@ -6,6 +6,7 @@ import org.junit.Before
 import org.junit.Test
 import java.io.File
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 internal class CacheTest {
@@ -22,6 +23,28 @@ internal class CacheTest {
 
     private fun clean() {
         File("cached_OpsGinieResponce.json").delete()
+    }
+
+    @Test
+    fun `invalidate cache file will delete cache file`() {
+        val opsGinieResponce = OpsGinieResponce(
+            listOf(),
+            Paging(first = "", last = ""),
+            1.toDouble(),
+            "id2"
+        )
+
+
+        File("cached_OpsGinieResponce.json")
+            .writeText(
+                Json.stringify(OpsGinieResponce.serializer(), opsGinieResponce)
+            )
+
+        val unit = Cache()
+
+        unit.invalidate()
+
+        assertFalse(File("cached_OpsGinieResponce.json").exists())
     }
 
     @Test

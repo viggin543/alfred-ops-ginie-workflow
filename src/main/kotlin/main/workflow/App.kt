@@ -1,8 +1,6 @@
 package main.workflow
 
 import com.google.inject.Guice
-import kotlinx.serialization.json.Json
-import main.workflow.alfred.AlfredItems
 import org.slf4j.LoggerFactory
 
 
@@ -18,19 +16,15 @@ object App {
 
 
         when {
-            argsList.isEmpty() ->  println(
-                Json.stringify(
-                    AlfredItems.serializer(),
-                    workflow.listAlerts()
-                )
+            argsList.isEmpty() -> println(
+                workflow.listAlerts().asJsonString()
+            )
+            !argsList.find { it.contains("__CLOSE__") }.isNullOrEmpty() -> println(
+                workflow.close(args.last().replace("__CLOSE__", ""))
             )
             argsList.isNotEmpty() -> println(
-                Json.stringify(
-                    AlfredItems.serializer(),
-                    workflow.listFilteredAlerts(argsList)
-                )
+                workflow.listFilteredAlerts(argsList).asJsonString()
             )
-
 
         }
     }

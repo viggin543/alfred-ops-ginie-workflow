@@ -11,6 +11,8 @@ class Cache {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
 
+    fun invalidate() = File(cacheFile).delete()
+
     fun get(action: () -> OpsGinieResponce?): OpsGinieResponce? {
         return when {
             cacheFileExists() && cacheFileLessThen5min() -> getCachedAlerts()
@@ -45,7 +47,7 @@ class Cache {
             TimeUnit.MILLISECONDS
         )
         log.info("cache is $cacheTime minutes old")
-        return cacheTime < 5
+        return cacheTime < 2
     }
 
     private val cacheFile = "cached_OpsGinieResponce.json"

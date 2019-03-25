@@ -5,7 +5,9 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import java.io.File
+import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
+import kotlin.test.expect
 
 
 internal class OpsGinieClientTest {
@@ -31,6 +33,12 @@ internal class OpsGinieClientTest {
             OpsGinieClient(Cache()).getAlerts()
 
         assertNotNull(jsonResponse)
+    }
+
+    @Test
+    fun `can parse close alert responce body`() {
+        val actual = CloseAlertRequestBody(user = "igor").asJsonBody()
+        assertEquals(92,actual.contentLength())
     }
 
     @Test

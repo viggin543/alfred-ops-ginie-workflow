@@ -6,6 +6,7 @@ import com.nhaarman.mockitokotlin2.whenever
 import main.workflow.opsGinieApi.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 
 internal class WorkflowTest {
 
@@ -36,6 +37,50 @@ internal class WorkflowTest {
         paging = Paging(next = "next",first = "fst",last = "lst")
     )
 
+    @Test
+    fun `can serialize alfred items`(){
+        val opsClient: OpsGinieClient = mock()
+        val afredItems = listOf(
+            alert,
+            alert.copy(message = "alert 2"),
+            alert.copy(message = "alert 3")
+        )
+        whenever(opsClient.getAlerts())
+            .thenReturn(
+                responce.copy(
+                    data = afredItems
+                ))
+
+        val actual = Workflow(opsClient).listFilteredAlerts(listOf()).asJsonString()
+        assertNotNull(actual)
+    }
+
+
+
+    @Test
+    fun `can close alert`() {
+        val opsClient: OpsGinieClient = mock()
+        val tinyId = "tinyId123"
+        whenever(opsClient.closeAlert(tinyId))
+            .thenReturn(CloseAlertResponce(result = "Request will be processed", took = 0.1, requestId = "id"))
+
+        val actual = Workflow(opsClient).close(tinyId)
+        assertEquals("ALERT CLOSED", actual)
+    }
+
+
+
+    @Test
+    fun `fail to  close alert`() {
+        val opsClient: OpsGinieClient = mock()
+        val tinyId = "tinyId123"
+        whenever(opsClient.closeAlert(tinyId))
+            .thenReturn(CloseAlertResponce(result = "sababa", took = 0.1, requestId = "id"))
+
+        val actual = Workflow(opsClient).close(tinyId)
+        assertEquals("FAILED TO CLOSE ALERT", actual)
+
+    }
 
     @Test
     fun `filter alerts by workflow args, args list contains filter, match alert message to lowercase user args`() {

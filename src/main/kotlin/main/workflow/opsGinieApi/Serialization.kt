@@ -3,6 +3,8 @@ package main.workflow.opsGinieApi
 
 import kotlinx.serialization.Optional
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import java.net.http.HttpRequest
 
 
 @Serializable
@@ -34,10 +36,29 @@ data class Alert(
 data class Paging(@Optional val next: String = "", val first: String, val last: String)
 
 @Serializable
-data class OpsGinieResponce(val data: List<Alert>,
-                            val paging: Paging,
-                            val took: Double,
-                            val requestId: String)
+data class OpsGinieResponce(
+    val data: List<Alert>,
+    val paging: Paging,
+    val took: Double,
+    val requestId: String
+)
 
+@Serializable
+data class CloseAlertRequestBody(
+    val user: String,
+    val source: String = "Closed via alfred workflow" ,
+    val note: String = "Action executed via Alert API"
+) {
+
+    fun asJsonBody() =
+        HttpRequest.BodyPublishers.ofString(Json.stringify(
+            CloseAlertRequestBody.serializer(),
+            this
+        ))!!
+
+}
+
+@Serializable
+data class CloseAlertResponce(val result:String,val took: Double,val requestId: String)
 
 

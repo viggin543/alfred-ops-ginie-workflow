@@ -21,6 +21,29 @@ open class OpsGinieClient @Inject constructor(private val cache: Cache) {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
 
+    private val apiKey = "719846f6-904c-4fab-b047-f306b3303c65"
+
+    open fun closeAlert(tinyId: String): CloseAlertResponce? {
+        return try {
+            val resp = Json.nonstrict.parse(
+                CloseAlertResponce.serializer(),
+                HttpClient.newHttpClient().send(
+                    HttpRequest.newBuilder()
+                        .uri(URI.create("https://api.opsgenie.com/v2/alerts/$tinyId/close?identifierType=tiny"))
+                        .header("Authorization", "GenieKey $apiKey")
+                        .header("Content-Type", "application/json")
+                        .POST(CloseAlertRequestBody(user = "igor").asJsonBody())
+                        .build(), HttpResponse.BodyHandlers.ofString()
+                ).body()
+            )
+            cache.invalidate()
+            resp
+        } catch (e: Exception) {
+            log.error("closing alert failed with error : ${e.message}")
+            null
+        }
+    }
+
     open fun getAlerts(): OpsGinieResponce? {
 
         return cache.get {
@@ -30,8 +53,8 @@ open class OpsGinieClient @Inject constructor(private val cache: Cache) {
                     OpsGinieResponce.serializer(),
                     HttpClient.newHttpClient().send(
                         HttpRequest.newBuilder()
-                            .uri(URI.create("https://api.opsgenie.com/v2/alerts?query=$query&offset=7&limit=20&sort=createdAt&order=desc"))
-                            .header("Authorization", "GenieKey 719846f6-904c-4fab-b047-f306b3303c65")
+                            .uri(URI.create("https://api.opsgenie.com/v2/alerts?query=$query&limit=20&sort=createdAt&order=desc"))
+                            .header("Authorization", "GenieKey $apiKey")
                             .build(), HttpResponse.BodyHandlers.ofString()
                     ).body()
                 )
