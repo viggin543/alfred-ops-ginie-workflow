@@ -1,15 +1,18 @@
 package main.workflow
 
 import com.google.inject.Inject
-import org.slf4j.LoggerFactory
 
 class FlowDeMultiplexer @Inject constructor(private val workflow: Workflow) {
-
-    private val log = LoggerFactory.getLogger(App::class.java)!!
 
 
     fun deMultiplex(args: List<String>): String {
         return when {
+
+            args.contains("__CONFIGURE_QUERY__") ->
+                workflow.configure(args.filter { it != "__CONFIGURE_QUERY__" }.joinToString(separator = " "), "./query")
+
+            args.contains("__CONFIGURE_SECRET__") ->
+                workflow.configure(args.filter { it != "__CONFIGURE_SECRET__" }, "./secret")
 
             shouldCloseSingleAlert(args) ->
                 workflow.close(

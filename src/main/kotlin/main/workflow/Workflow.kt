@@ -1,10 +1,13 @@
 package main.workflow
 
 import com.google.inject.Inject
+import kotlinx.serialization.toUtf8Bytes
 import main.workflow.alfred.*
 import main.workflow.opsGinieApi.Alert
 import main.workflow.opsGinieApi.OpsGinieClient
 import org.slf4j.LoggerFactory
+import java.nio.file.Files
+import java.nio.file.Paths
 
 
 open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
@@ -67,4 +70,14 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
             acc + result
         }
     }
+
+    fun configure(arg: String, path: String)= configure(listOf(arg), path)
+
+    fun configure(args: List<String>, path: String): String {
+        log.info("configuring $path: $args")
+        Files.write(Paths.get(path),args.last().toUtf8Bytes())
+        return "wrote $path to workflow directory"
+    }
+
+
 }

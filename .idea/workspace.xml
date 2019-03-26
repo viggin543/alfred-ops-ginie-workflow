@@ -27,13 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e826467-20f1-40e9-9f03-243b77ddb5b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -89,95 +88,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="185">
+              <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/b8815e48fb45e94821287365bd9ce8623f459ac7/kotlin-stdlib-1.3.21-sources.jar!/kotlin/String.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/generated/_Collections.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="2306" column="27" selection-start-line="2306" selection-start-column="27" selection-end-line="2306" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
-              <folding>
-                <element signature="e#24#231#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#23#84#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-              <folding>
-                <element signature="e#23#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-              <folding>
-                <element signature="e#23#202#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/Mocking.kt">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+              <caret line="11" column="86" lean-forward="true" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -185,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="149">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding>
                 <element signature="e#30#110#0" expanded="true" />
               </folding>
@@ -271,18 +213,18 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/OpsGinieApiTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieApiTest.kt" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.json" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Serialization.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/Cache.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/CacheTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.java" />
         <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt" />
       </list>
     </option>
   </component>
@@ -311,7 +253,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,6 +294,15 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="workflow" type="462c0819:PsiDirectoryNode" />
               <item name="alfred" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ops" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+              <item name="opsGinieApi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
@@ -437,6 +387,13 @@
               <item name="Gradle: junit:junit:4.12" type="70bed36:NamedLibraryElementNode" />
               <item name="junit-4.12.jar" type="462c0819:PsiDirectoryNode" />
               <item name="junit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: junit:junit:4.12" type="70bed36:NamedLibraryElementNode" />
+              <item name="junit-4.12.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="junit" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -479,6 +436,14 @@
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.21" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlin-stdlib-1.3.21.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.21" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
@@ -504,6 +469,32 @@
             </path>
             <path>
               <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlinx-serialization-runtime-0.10.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlinx-serialization-runtime-0.10.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlinx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="kotlinx-serialization-runtime-0.10.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlinx" type="462c0819:PsiDirectoryNode" />
+              <item name="serialization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ops" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -526,6 +517,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,7 +528,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553588817247" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553627802990" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON&#10;Groovy" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -648,18 +640,28 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FlowDeMultiplexerTest.call close alert when arg contains magic __CLOSE__ string" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in com.viggin.alfred.ops.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.viggin.alfred.ops.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.workflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="main.workflow" />
-      <option name="MAIN_CLASS_NAME" value="main.workflow.FlowDeMultiplexerTest" />
-      <option name="METHOD_NAME" value="call close alert when arg contains magic __CLOSE__ string" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in com.viggin.alfred.ops.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.viggin.alfred.ops.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in com.viggin.alfred.ops.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.viggin.alfred.ops.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -676,40 +678,6 @@
       <option name="PACKAGE_NAME" value="main.workflow" />
       <option name="MAIN_CLASS_NAME" value="main.workflow.FlowDeMultiplexerTest" />
       <option name="METHOD_NAME" value="call close all alert like this when args list contains magic string __CLOSE_LIKE_THIS__" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlowDeMultiplexerTest.calls filter alerts when args list contains filter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.viggin.alfred.ops.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.workflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="main.workflow" />
-      <option name="MAIN_CLASS_NAME" value="main.workflow.FlowDeMultiplexerTest" />
-      <option name="METHOD_NAME" value="calls filter alerts when args list contains filter" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlowDeMultiplexerTest.testDeMultiplex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="com.viggin.alfred.ops.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.workflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="main.workflow" />
-      <option name="MAIN_CLASS_NAME" value="main.workflow.FlowDeMultiplexerTest" />
-      <option name="METHOD_NAME" value="testDeMultiplex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -944,11 +912,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in com.viggin.alfred.ops.test (2)" />
+        <item itemvalue="JUnit.All in com.viggin.alfred.ops.test (1)" />
+        <item itemvalue="JUnit.All in com.viggin.alfred.ops.test" />
         <item itemvalue="Gradle.ops [publish]" />
         <item itemvalue="JUnit.FlowDeMultiplexerTest.call close all alert like this when args list contains magic string __CLOSE_LIKE_THIS__" />
-        <item itemvalue="JUnit.FlowDeMultiplexerTest.call close alert when arg contains magic __CLOSE__ string" />
-        <item itemvalue="JUnit.FlowDeMultiplexerTest.calls filter alerts when args list contains filter" />
-        <item itemvalue="JUnit.FlowDeMultiplexerTest.testDeMultiplex" />
       </list>
     </recent_temporary>
   </component>
@@ -1000,7 +968,8 @@
       <workItem from="1553114829353" duration="3357000" />
       <workItem from="1553184744027" duration="4822000" />
       <workItem from="1553452239397" duration="9756000" />
-      <workItem from="1553526059889" duration="11078000" />
+      <workItem from="1553526059889" duration="11179000" />
+      <workItem from="1553620377307" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="using guice like a bosssss">
       <created>1553314955710</created>
@@ -1037,25 +1006,17 @@
       <option name="project" value="LOCAL" />
       <updated>1553547082803</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="can close many alerts like my alert">
+      <created>1553588836460</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1553588836460</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FlowDeMultiplexerTest_testDeMultiplex - 2019.03.26 at 09h 17m 26s.xml">
-      <configuration name="FlowDeMultiplexerTest.testDeMultiplex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlowDeMultiplexerTest_testDeMultiplex - 2019.03.26 at 09h 17m 45s.xml">
-      <configuration name="FlowDeMultiplexerTest.testDeMultiplex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlowDeMultiplexerTest_testDeMultiplex - 2019.03.26 at 09h 18m 17s.xml">
-      <configuration name="FlowDeMultiplexerTest.testDeMultiplex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlowDeMultiplexerTest_testDeMultiplex - 2019.03.26 at 09h 18m 34s.xml">
-      <configuration name="FlowDeMultiplexerTest.testDeMultiplex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlowDeMultiplexerTest_testDeMultiplex - 2019.03.26 at 09h 18m 58s.xml">
-      <configuration name="FlowDeMultiplexerTest.testDeMultiplex" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FlowDeMultiplexerTest_calls_filter_alerts_when_args_list_contains_filter - 2019.03.26 at 09h 20m 57s.xml">
       <configuration name="FlowDeMultiplexerTest.calls filter alerts when args list contains filter" configurationId="JUnit" />
     </history-entry>
@@ -1071,15 +1032,30 @@
     <history-entry file="FlowDeMultiplexerTest_call_close_all_alert_like_this_when_args_list_contains_magic_string___CLOSE_LIKE_THIS__ - 2019.03.26 at 09h 42m 32s.xml">
       <configuration name="FlowDeMultiplexerTest.call close all alert like this when args list contains magic string __CLOSE_LIKE_THIS__" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_com_viggin_alfred_ops_test - 2019.03.26 at 19h 16m 25s.xml">
+      <configuration name="All in com.viggin.alfred.ops.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_com_viggin_alfred_ops_test - 2019.03.26 at 19h 17m 12s.xml">
+      <configuration name="All in com.viggin.alfred.ops.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_com_viggin_alfred_ops_test_(1) - 2019.03.26 at 21h 00m 03s.xml">
+      <configuration name="All in com.viggin.alfred.ops.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_com_viggin_alfred_ops_test_(1) - 2019.03.26 at 21h 01m 00s.xml">
+      <configuration name="All in com.viggin.alfred.ops.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_com_viggin_alfred_ops_test_(2) - 2019.03.26 at 21h 11m 00s.xml">
+      <configuration name="All in com.viggin.alfred.ops.test (2)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64564000" />
+    <option name="totallyTimeSpent" value="68789000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.15831296" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.1601467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1095,7 +1071,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3781421" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3781421" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Quokka" order="10" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
@@ -1103,7 +1079,7 @@
       <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32885212" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32977587" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.31696904" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3169399" />
       <window_info anchor="bottom" id="TeamCity" order="17" />
       <window_info anchor="bottom" id="Messages" order="18" weight="0.32977587" />
       <window_info active="true" anchor="bottom" id="Database Console" order="19" visible="true" weight="0.5563599" />
@@ -1209,30 +1185,10 @@
     <MESSAGE value="adding some tests" />
     <MESSAGE value="caching alert responces for 5 minutes in file" />
     <MESSAGE value="can close alerts with workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="can close alerts with workflow" />
+    <MESSAGE value="can close many alerts like my alert" />
+    <option name="LAST_COMMIT_MESSAGE" value="can close many alerts like my alert" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/net/URLEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5670">
-          <caret line="219" column="25" selection-start-line="219" selection-start-column="25" selection-end-line="219" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/alfred.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="310" column="19" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10-all/54ye4nru8k2rpf7xwj15he4fo/gradle-4.10/src/core-api/org/gradle/api/NamedDomainObjectContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1451,22 +1407,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/opsgenie.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/workflow.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
@@ -1475,10 +1417,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/Mocking.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/b8815e48fb45e94821287365bd9ce8623f459ac7/kotlin-stdlib-1.3.21-sources.jar!/kotlin/String.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        <state relative-caret-position="240">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69090">
+          <caret line="2306" column="27" selection-start-line="2306" selection-start-column="27" selection-end-line="2306" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1489,74 +1455,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/WorkflowTest.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nhaarman.mockitokotlin2/mockito-kotlin/2.1.0/9698b904be4f627c2f9d7dd095298fcb3aa3e6cb/mockito-kotlin-2.1.0-sources.jar!/com/nhaarman/mockitokotlin2/Mocking.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding>
-            <element signature="e#30#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/b8815e48fb45e94821287365bd9ce8623f459ac7/kotlin-stdlib-1.3.21-sources.jar!/kotlin/String.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/FlowDeMultiplexerTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-          <folding>
-            <element signature="e#23#202#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="630">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/App.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="420">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="e#23#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/main/workflow/opsGinieApi/OpsGinieClientTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="930">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/generated/_Collections.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/alfred/AlfredDataObjects.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="e#30#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/224a3bcfa1c088dd5d7c4a3958a68427b44c65dc/kotlin-stdlib-common-1.3.21-sources.jar!/kotlin/collections/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="167" column="36" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime/0.10.0/adf850006cf0918b5fa1379aef9fb7bb45d8c42c/kotlinx-serialization-runtime-0.10.0-sources.jar!/kotlinx/serialization/Serialization.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/b8815e48fb45e94821287365bd9ce8623f459ac7/kotlin-stdlib-1.3.21-sources.jar!/kotlin/io/FileReadWrite.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
-          <caret line="2306" column="27" selection-start-line="2306" selection-start-column="27" selection-end-line="2306" selection-end-column="27" />
+          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/opsGinieApi/OpsGinieClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/FlowDeMultiplexer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="e#23#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="11" column="86" lean-forward="true" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/workflow/Workflow.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
         </state>
       </provider>
     </entry>

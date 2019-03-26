@@ -22,6 +22,7 @@ data class AlfredItemText(val copy: String)
 data class SimpleAlfredItem(val uid: String,
                             val title: String,
                             val subtitle: String,
+                            val valid: Boolean,
                             val arg: String = title)
 @Serializable
 data class SimpleAlfredItems(val items: List<SimpleAlfredItem>) {

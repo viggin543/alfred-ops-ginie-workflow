@@ -7,7 +7,7 @@ import org.junit.Test
 import java.io.File
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
-import kotlin.test.expect
+import kotlin.test.assertNull
 
 
 internal class OpsGinieClientTest {
@@ -27,12 +27,12 @@ internal class OpsGinieClientTest {
         File("cached_OpsGinieResponce.json").delete()
     }
     @Test
-    fun `can parse real response`() {
+    fun `return null on ops ginie api responce error`() {
 
         val jsonResponse =
             OpsGinieClient(Cache()).getAlerts()
 
-        assertNotNull(jsonResponse)
+        assertNull(jsonResponse)
     }
 
     @Test

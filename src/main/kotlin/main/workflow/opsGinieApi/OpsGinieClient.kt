@@ -4,6 +4,8 @@ import com.google.inject.Inject
 import kotlinx.serialization.json.Json
 import main.workflow.App
 import org.slf4j.LoggerFactory
+import java.io.File
+import java.io.FileNotFoundException
 import java.net.URI
 import java.net.URLEncoder
 import java.net.http.HttpClient
@@ -13,15 +15,23 @@ import java.nio.charset.Charset
 
 open class OpsGinieClient @Inject constructor(private val cache: Cache) {
 
-    private val query = URLEncoder.encode(
-        """(status: open AND teams: ("aragorn" OR "aragorn_counting" OR "ddv_render" OR "renderer" OR "ddv_billing" OR "services")) """
-                + """OR (status: open AND owner: (ron@innovid.com OR elad@innovid.com OR igor@innovid.com OR gal.berger@innovid.com))"""
-        , Charset.defaultCharset()
-    )
-
     private val log = LoggerFactory.getLogger(App::class.java)!!
 
-    private val apiKey = "719846f6-904c-4fab-b047-f306b3303c65"
+
+    private val query = try {URLEncoder.encode(
+        File("./query").readText(Charsets.UTF_8)
+        , Charset.defaultCharset()
+    )} catch (e: FileNotFoundException) {
+        log.error("missing ops ginie query")
+        ""
+    }
+
+    private val apiKey = try {
+        File("./secret").readText(Charsets.UTF_8)
+    } catch (e: FileNotFoundException) {
+        log.error("missing ops ginie secret")
+        ""
+    }
 
     open fun closeAlert(tinyId: String): CloseAlertResponce? {
         return try {
