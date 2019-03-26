@@ -11,21 +11,12 @@ object App {
         val argsList = args.toList()
         log.info("starting workflow with args $argsList")
 
-        val workflow = Guice.createInjector(WorkflowModule())
-            .getInstance(Workflow::class.java)
+        val flowDeMultiplexer = Guice.createInjector(WorkflowModule())
+            .getInstance(FlowDeMultiplexer::class.java)
 
+        println(
+            flowDeMultiplexer.deMultiplex(argsList)
+        )
 
-        when {
-            argsList.isEmpty() -> println(
-                workflow.listAlerts().asJsonString()
-            )
-            !argsList.find { it.contains("__CLOSE__") }.isNullOrEmpty() -> println(
-                workflow.close(args.last().replace("__CLOSE__", ""))
-            )
-            argsList.isNotEmpty() -> println(
-                workflow.listFilteredAlerts(argsList).asJsonString()
-            )
-
-        }
     }
 }

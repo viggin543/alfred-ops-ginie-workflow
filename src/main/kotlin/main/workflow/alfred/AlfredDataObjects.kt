@@ -10,7 +10,7 @@ data class AlfredIcon(val type: String="", val path: String)
 data class  AlfredMode(val valid: Boolean, val arg: String, val subtitle: String)
 
 @Serializable
-data class AlfredMods(val cmd: AlfredMode)
+data class AlfredMods(val cmd: AlfredMode,val shift: AlfredMode)
 
 
 @Serializable

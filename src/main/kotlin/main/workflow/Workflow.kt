@@ -7,14 +7,19 @@ import main.workflow.opsGinieApi.OpsGinieClient
 import org.slf4j.LoggerFactory
 
 
-class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
+open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
 
+    open fun listAlerts(): AlfredItems = listFilteredAlerts(listOf())
 
-    fun listAlerts(): AlfredItems = listFilteredAlerts(listOf())
+    open fun listFilteredAlerts(args: List<String>): AlfredItems {
 
-    fun listFilteredAlerts(args: List<String>): AlfredItems {
+        fun matchByMessage(
+            args: List<String>
+        ): (Alert) -> Boolean =
+            { alert -> args.isEmpty() || alert.message.toLowerCase().contains(args.last().toLowerCase()) }
+
 
         val alfredItems = AlfredItems(
             (opsGinieClient.getAlerts()?.data ?: listOf())
@@ -31,19 +36,18 @@ class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
                         icon = AlfredIcon(path = "/Users/domrevigor/personal_projects/ops/src/main/resources/opsgenie.jpg"),
                         valid = true,
                         text = AlfredItemText(alertUrl),
-                        mods = AlfredMods(AlfredMode(true, "__CLOSE__${it.tinyId}", "close alert"))
+                        mods = AlfredMods(
+                            cmd = AlfredMode(true, "__CLOSE__${it.tinyId}", "close alert"),
+                            shift = AlfredMode(true, "__CLOSE_LIKE_THIS__${it.message}", "close alerts like this")
+                        )
                     )
                 })
         log.info("listing ${alfredItems.items.size} alerts")
         return alfredItems
     }
 
-    private fun matchByMessage(
-        args: List<String>
-    ): (Alert) -> Boolean =
-        { alert -> args.isEmpty() || alert.message.toLowerCase().contains(args.last().toLowerCase()) }
 
-    fun close(tinyID: String): String {
+    open fun close(tinyID: String): String {
         log.info("about to close alert with tinyId($tinyID)")
         val resp = opsGinieClient.closeAlert(tinyID)
         log.info("close alert responce: $resp")
@@ -51,8 +55,16 @@ class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
         return if (resp == null || resp.result == "Request will be processed")
             "ALERT CLOSED"
         else "FAILED TO CLOSE ALERT"
-
-
     }
 
+    open fun closeAllLikeThis(message: String): String {
+        log.info("about to close alert with message($message)")
+        return listAlerts().items.filter { it.title == message }.map {
+            log.info("about to close ${it.title}, ${it.uid}")
+            opsGinieClient.closeAlert(it.uid)?.result ?: "FAILED"
+        }.reduce { acc, result ->
+            log.info("closing alert responce $result")
+            acc + result
+        }
+    }
 }
