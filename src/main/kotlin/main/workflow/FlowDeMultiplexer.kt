@@ -20,10 +20,11 @@ class FlowDeMultiplexer @Inject constructor(private val workflow: Workflow) {
                 )
 
             shouldCloseAllAlertsLike(args) ->
-                workflow.closeAllLikeThis(
+                "${workflow.closeAllLikeThis(
                     args.joinToString(separator = " ")
                         .replace("__CLOSE_LIKE_THIS__", "")
-                )
+                )}: alerts where closed"
+
 
             shouldFilterAlerts(args) ->
                 workflow.listFilteredAlerts(args).asJsonString()

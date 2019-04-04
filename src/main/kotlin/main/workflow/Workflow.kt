@@ -5,6 +5,8 @@ import kotlinx.serialization.toUtf8Bytes
 import main.workflow.alfred.*
 import main.workflow.opsGinieApi.Alert
 import main.workflow.opsGinieApi.OpsGinieClient
+import org.apache.commons.text.similarity.LevenshteinDistance
+
 import org.slf4j.LoggerFactory
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -55,27 +57,35 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
         val resp = opsGinieClient.closeAlert(tinyID)
         log.info("close alert responce: $resp")
 
-        return if (resp == null || resp.result == "Request will be processed")
+        return if (resp?.isAccepted() == true)
             "ALERT CLOSED"
         else "FAILED TO CLOSE ALERT"
     }
 
-    open fun closeAllLikeThis(message: String): String {
+
+    open fun closeAllLikeThis(message: String): Int {
         log.info("about to close alert with message($message)")
-        return listAlerts().items.filter { it.title == message }.map {
-            log.info("about to close ${it.title}, ${it.uid}")
-            opsGinieClient.closeAlert(it.uid)?.result ?: "FAILED"
-        }.reduce { acc, result ->
-            log.info("closing alert responce $result")
-            acc + result
+        val alertsToClose = listAlerts().items.filter {
+            LevenshteinDistance()
+                .apply(it.title, message).toDouble() < 8
+        }
+        return when {
+            alertsToClose.isNotEmpty() -> alertsToClose.map {
+                log.info("about to close ${it.title}, ${it.uid}")
+                if (opsGinieClient.closeAlert(it.uid)?.isAccepted() == true) 1 else 0
+            }.reduce { acc, result ->
+                log.info("closing alert responce $result")
+                acc + result
+            }
+            else -> 0
         }
     }
 
-    fun configure(arg: String, path: String)= configure(listOf(arg), path)
+    fun configure(arg: String, path: String) = configure(listOf(arg), path)
 
     fun configure(args: List<String>, path: String): String {
         log.info("configuring $path: $args")
-        Files.write(Paths.get(path),args.last().toUtf8Bytes())
+        Files.write(Paths.get(path), args.last().toUtf8Bytes())
         return "wrote $path to workflow directory"
     }
 

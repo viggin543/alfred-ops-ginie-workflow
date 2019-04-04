@@ -39,6 +39,7 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
     compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+    compile group: 'org.apache.commons', name: 'commons-text', version: '1.6'
 
     testImplementation "org.jetbrains.kotlin:kotlin-test"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit"

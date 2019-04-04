@@ -46,19 +46,25 @@ data class OpsGinieResponce(
 @Serializable
 data class CloseAlertRequestBody(
     val user: String,
-    val source: String = "Closed via alfred workflow" ,
+    val source: String = "Closed via alfred workflow",
     val note: String = "Action executed via Alert API"
 ) {
 
     fun asJsonBody() =
-        HttpRequest.BodyPublishers.ofString(Json.stringify(
-            CloseAlertRequestBody.serializer(),
-            this
-        ))!!
+        HttpRequest.BodyPublishers.ofString(
+            Json.stringify(
+                CloseAlertRequestBody.serializer(),
+                this
+            )
+        )!!
 
 }
 
 @Serializable
-data class CloseAlertResponce(val result:String,val took: Double,val requestId: String)
+data class CloseAlertResponce(val result: String, val took: Double, val requestId: String) {
+    fun isAccepted() =
+        this.result == "Request will be processed"
+
+}
 
 

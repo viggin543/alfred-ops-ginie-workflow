@@ -58,14 +58,14 @@ class FlowDeMultiplexerTest {
         val workflow: Workflow = mock()
         val unit = FlowDeMultiplexer(workflow)
 
-        val args = listOf("__CLOSE_LIKE_THIS__SOME message of alert that exists 100 times")
+        val args = listOf("__CLOSE_LIKE_THIS__SOME message of alert that exists 1 times")
 
-        whenever(workflow.closeAllLikeThis("SOME message of alert that exists 100 times"))
-            .thenReturn("alerts closed")
+        whenever(workflow.closeAllLikeThis("SOME message of alert that exists 1 times"))
+            .thenReturn(1)
 
         unit.deMultiplex(args)
 
-        verify(workflow).closeAllLikeThis("SOME message of alert that exists 100 times")
+        verify(workflow).closeAllLikeThis("SOME message of alert that exists 1 times")
     }
 
 }
