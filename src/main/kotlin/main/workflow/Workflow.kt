@@ -12,6 +12,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 
+
 open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
@@ -74,7 +75,7 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
                 log.info("about to close ${it.title}, ${it.uid}")
                 if (opsGinieClient.closeAlert(it.uid)?.isAccepted() == true) 1 else 0
             }.reduce { acc, result ->
-                log.info("closing alert responce $result")
+                log.info("alerts closed:  $result")
                 acc + result
             }
             else -> 0

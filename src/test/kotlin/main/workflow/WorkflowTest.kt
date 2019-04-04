@@ -4,7 +4,6 @@ package main.workflow
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import main.workflow.opsGinieApi.*
-import org.apache.commons.text.similarity.LevenshteinDistance
 import org.mockito.ArgumentMatchers.anyString
 import kotlin.test.Test
 import kotlin.test.assertEquals
