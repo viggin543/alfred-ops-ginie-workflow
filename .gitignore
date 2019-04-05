@@ -5,3 +5,4 @@ workflow.log
 .idea/sonarlint
 .idea/libraries
 .idea/modules
+.idea/workspace.xml
