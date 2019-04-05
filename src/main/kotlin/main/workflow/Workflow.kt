@@ -12,7 +12,6 @@ import java.nio.file.Files
 import java.nio.file.Paths
 
 
-
 open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClient) {
 
     private val log = LoggerFactory.getLogger(App::class.java)!!
@@ -45,7 +44,7 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
                         mods = AlfredMods(
                             cmd = AlfredMode(true, "__CLOSE__${it.tinyId}", "close alert"),
                             shift = AlfredMode(true, "__CLOSE_LIKE_THIS__${it.message}", "close alerts like this"),
-                            alt = AlfredMode(true, "__ACK_THIS__${it.message}", "ack this alert")
+                            alt = AlfredMode(true, "__ACK_THIS__${it.tinyId}", "ack this alert")
                         )
                     )
                 })
