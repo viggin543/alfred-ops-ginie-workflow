@@ -44,7 +44,8 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
                         text = AlfredItemText(alertUrl),
                         mods = AlfredMods(
                             cmd = AlfredMode(true, "__CLOSE__${it.tinyId}", "close alert"),
-                            shift = AlfredMode(true, "__CLOSE_LIKE_THIS__${it.message}", "close alerts like this")
+                            shift = AlfredMode(true, "__CLOSE_LIKE_THIS__${it.message}", "close alerts like this"),
+                            alt = AlfredMode(true, "__ACK_THIS__${it.message}", "ack this alert")
                         )
                     )
                 })
@@ -88,6 +89,13 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
         log.info("configuring $path: $args")
         Files.write(Paths.get(path), args.last().toUtf8Bytes())
         return "wrote $path to workflow directory"
+    }
+
+    fun ack(tinyId: String): String {
+        log.info("acking alert $tinyId")
+        val result = opsGinieClient.ackAlert(tinyId).result
+        log.info("ack result is $result")
+        return result
     }
 
 

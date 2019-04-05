@@ -25,14 +25,28 @@ internal class OpsGinieClientTest {
 
     private fun clean() {
         File("cached_OpsGinieResponce.json").delete()
+        File("query").delete()
+        File("secret").delete()
+        File("user").delete()
     }
+
+    @Test(expected = AssertionError::class)
+    fun `throw assert alert on list alerts if query is not configured`() {
+        OpsGinieClient(Cache()).getAlerts()
+    }
+
+    @Test(expected = AssertionError::class)
+    fun `throw assert alert on list alerts if api key is not configured`() {
+        File("query").writeText("query")
+        OpsGinieClient(Cache()).getAlerts()
+    }
+
     @Test
-    fun `return null on ops ginie api responce error`() {
+    fun `can read query from configuration and url encode it`(){
+        File("query").writeText("thi sis a query")
+        val unit = OpsGinieClient(Cache())
+        assertEquals(unit.query,"thi+sis+a+query")
 
-        val jsonResponse =
-            OpsGinieClient(Cache()).getAlerts()
-
-        assertNull(jsonResponse)
     }
 
     @Test

@@ -48,7 +48,7 @@ dependencies {
 
 application {
     mainClassName = 'main.workflow.App'
-    applicationDefaultJvmArgs = ['--add-opens', 'java.base/java.lang=ALL-UNNAMED']
+    applicationDefaultJvmArgs = ['--add-opens', 'java.base/java.lang=ALL-UNNAMED', '-ea']
 }
 
 clean {

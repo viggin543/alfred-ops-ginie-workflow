@@ -10,7 +10,7 @@ data class AlfredIcon(val type: String="", val path: String)
 data class  AlfredMode(val valid: Boolean, val arg: String, val subtitle: String)
 
 @Serializable
-data class AlfredMods(val cmd: AlfredMode,val shift: AlfredMode)
+data class AlfredMods(val cmd: AlfredMode,val shift: AlfredMode, val alt: AlfredMode)
 
 
 @Serializable
@@ -19,10 +19,10 @@ data class AlfredItemText(val copy: String)
 
 
 @Serializable
-data class SimpleAlfredItem(val uid: String,
+data class SimpleAlfredItem(val uid: String = "",
                             val title: String,
                             val subtitle: String,
-                            val valid: Boolean,
+                            val valid: Boolean = false,
                             val arg: String = title)
 @Serializable
 data class SimpleAlfredItems(val items: List<SimpleAlfredItem>) {
