@@ -3,3 +3,5 @@ build
 out
 workflow.log
 .idea/sonarlint
+.idea/libraries
+.idea/modules
