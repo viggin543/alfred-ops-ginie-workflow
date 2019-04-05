@@ -3,26 +3,25 @@ package main.workflow
 import com.google.inject.Inject
 import main.workflow.alfred.SimpleAlfredItem
 import main.workflow.alfred.SimpleAlfredItems
+import org.reflections.Reflections
+import org.reflections.scanners.MethodAnnotationsScanner
+import org.slf4j.LoggerFactory
 
-class FlowDeMultiplexer @Inject constructor(private val workflow: Workflow) {
 
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class ConfigWorkflow(val commands: Array<String>)
 
-    // todo use annotaions and reflaction to compile a list of actions and tokens
+class FlowDeMultiplexer @Inject constructor(
+    private val workflow: Workflow,
+    private val configurator: WorkFlowConfigurator
+) {
+
     fun deMultiplex(args: List<String>): String {
+
         return try {
             when {
-
-                args.contains("__CONFIGURE_QUERY__") ->
-                    workflow.configure(
-                        args.filter { it != "__CONFIGURE_QUERY__" }.joinToString(separator = " "),
-                        "./query"
-                    )
-
-                args.contains("__CONFIGURE_SECRET__") ->
-                    workflow.configure(args.filter { it != "__CONFIGURE_SECRET__" }, "./secret")
-
-                args.contains("__CONFIGURE_USER__") ->
-                    workflow.configure(args.filter { it != "__CONFIGURE_USER__" }, "./user")
+                configurator.isConfigureCommand(args) -> configurator.configure(args)
 
                 shouldCloseSingleAlert(args) ->
                     workflow.close(

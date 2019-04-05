@@ -5,6 +5,8 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import main.workflow.opsGinieApi.*
 import org.mockito.ArgumentMatchers.anyString
+import org.reflections.Reflections
+import org.reflections.scanners.MethodAnnotationsScanner
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -91,6 +93,17 @@ internal class WorkflowTest {
         assertEquals(2, actual)
     }
 
+    @Test
+    fun `configure must be annotated with three command words`() {
+        val reflections = Reflections(
+            "main.workflow",
+            MethodAnnotationsScanner()
+        )
+
+        val actual = reflections.getMethodsAnnotatedWith(ConfigWorkflow::class.java).first()
+            .getAnnotation(ConfigWorkflow::class.java).commands
+        assertEquals(3, actual.size)
+    }
 
 
     @Test

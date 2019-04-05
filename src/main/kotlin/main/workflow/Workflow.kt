@@ -52,7 +52,6 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
         return alfredItems
     }
 
-
     open fun close(tinyID: String): String {
         log.info("about to close alert with tinyId($tinyID)")
         val resp = opsGinieClient.closeAlert(tinyID)
@@ -62,7 +61,6 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
             "ALERT CLOSED"
         else "FAILED TO CLOSE ALERT"
     }
-
 
     open fun closeAllLikeThis(message: String): Int {
         log.info("about to close alert with message($message)")
@@ -82,13 +80,19 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
         }
     }
 
-    fun configure(arg: String, path: String) = configure(listOf(arg), path)
 
-    fun configure(args: List<String>, path: String): String {
+    @ConfigWorkflow(commands = ["__CONFIGURE_QUERY__", "__CONFIGURE_SECRET__", "__CONFIGURE_USER__"])
+    fun configure(args: List<String>): String {
+        fun configCommandToFileName(command: String) =
+            command.replace("CONFIGURE", "")
+                .replace("_", "").toLowerCase()
+
+        val path = configCommandToFileName(args.first())
         log.info("configuring $path: $args")
         Files.write(Paths.get(path), args.last().toUtf8Bytes())
         return "wrote $path to workflow directory"
     }
+
 
     fun ack(tinyId: String): String {
         log.info("acking alert $tinyId")
@@ -99,3 +103,4 @@ open class Workflow @Inject constructor(private val opsGinieClient: OpsGinieClie
 
 
 }
+

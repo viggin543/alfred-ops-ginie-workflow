@@ -13,7 +13,7 @@ class FlowDeMultiplexerTest {
     @Test
     fun `calls list alerts whan args list is empty`() {
         val workflow: Workflow = mock()
-        val unit = FlowDeMultiplexer(workflow)
+        val unit = FlowDeMultiplexer(workflow, WorkFlowConfigurator(workflow))
 
         whenever(workflow.listAlerts())
             .thenReturn(AlfredItems(listOf()))
@@ -26,7 +26,7 @@ class FlowDeMultiplexerTest {
     @Test
     fun `calls filter alerts when args list contains filter`() {
         val workflow: Workflow = mock()
-        val unit = FlowDeMultiplexer(workflow)
+        val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow))
 
         val args = listOf("banana")
 
@@ -41,7 +41,7 @@ class FlowDeMultiplexerTest {
     @Test
     fun `call close alert when arg contains magic __CLOSE__ string`() {
         val workflow: Workflow = mock()
-        val unit = FlowDeMultiplexer(workflow)
+        val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow))
 
         val args = listOf("__CLOSE__123")
 
@@ -56,7 +56,7 @@ class FlowDeMultiplexerTest {
     @Test
     fun `call close all alert like this when args list contains magic string __CLOSE_LIKE_THIS__`(){
         val workflow: Workflow = mock()
-        val unit = FlowDeMultiplexer(workflow)
+        val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow))
 
         val args = listOf("__CLOSE_LIKE_THIS__SOME message of alert that exists 1 times")
 
