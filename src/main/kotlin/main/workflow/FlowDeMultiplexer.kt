@@ -47,7 +47,7 @@ class FlowDeMultiplexer @Inject constructor(
     private fun alfredModCommand(args: List<String>): List<() -> Any> {
         fun Method.getModMagicString() = this.getAnnotation(AlfredMod::class.java).command
         return reflections.getMethodsAnnotatedWith(AlfredMod::class.java).filter { method ->
-            !args.find { it.contains(method.getModMagicString()) }.isNullOrEmpty()
+            args.find { it.contains(method.getModMagicString()) }?.isNotEmpty() ?: false
         }.map {
             { it.invoke(workflow, args.last().replace(it.getModMagicString(), "")) }
         }
