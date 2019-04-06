@@ -4,9 +4,11 @@ jobs:
       - image: circleci/openjdk:11.0.2-jdk
     steps:
       - run: |
-          ls |
-          echo wat |
-          ls .. |
+          ls
+          echo wat
+          ls ..
           ../gradlew test
+
+
 
 
