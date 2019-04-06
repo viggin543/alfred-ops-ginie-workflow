@@ -77,5 +77,5 @@ in workflow work dir
  
  
  ## maintenance
- i can be found: domrevigor@gmail.com
+ domrevigor@gmail.com
  
