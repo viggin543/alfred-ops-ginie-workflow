@@ -2,9 +2,10 @@ package main.workflow
 
 import com.google.inject.Inject
 import org.reflections.Reflections
-import org.reflections.scanners.MethodAnnotationsScanner
 
-class WorkFlowConfigurator @Inject constructor(private val workflow: Workflow) {
+class WorkFlowConfigurator @Inject constructor(
+    private val workflow: Workflow,
+    reflections : Reflections) {
 
 
     fun isConfigureCommand(args: List<String>) =
@@ -14,12 +15,6 @@ class WorkFlowConfigurator @Inject constructor(private val workflow: Workflow) {
         workflow.configure(
             listOf(args.first(), args.subList(1, args.size).joinToString(separator = " "))
         )
-
-
-    private val reflections = Reflections(
-        "main.workflow",
-        MethodAnnotationsScanner()
-    )
 
     private val commands = reflections.getMethodsAnnotatedWith(ConfigWorkflow::class.java).first()
         .getAnnotation(ConfigWorkflow::class.java).commands
