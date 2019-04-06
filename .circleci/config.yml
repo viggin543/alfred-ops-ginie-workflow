@@ -4,6 +4,6 @@ jobs:
       - image: circleci/openjdk:11.0.2-jdk
     steps:
       - run: |
-          ./gradlew test
+          ../gradlew test
 
 
