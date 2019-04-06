@@ -5,22 +5,21 @@ import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
 import main.workflow.alfred.AlfredItems
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 
 class FlowDeMultiplexerTest {
 
     @Test
-    fun `calls list alerts whan args list is empty`() {
+    fun `calls list alerts when args list is empty`() {
         val workflow: Workflow = mock()
         val unit = FlowDeMultiplexer(workflow, WorkFlowConfigurator(workflow))
 
-        whenever(workflow.listAlerts())
+        whenever(workflow.listFilteredAlerts(listOf()))
             .thenReturn(AlfredItems(listOf()))
 
         unit.deMultiplex(listOf())
 
-        verify(workflow).listAlerts()
+        verify(workflow).listFilteredAlerts(listOf())
     }
 
     @Test
@@ -54,6 +53,23 @@ class FlowDeMultiplexerTest {
     }
 
     @Test
+    fun `ack_this mod should call workflow ack method`(){
+        val workflow: Workflow = mock()
+        val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow))
+
+        val args = listOf("__ACK_THIS__123")
+
+        whenever(workflow.ack("123"))
+            .thenReturn("ok boss")
+
+        unit.deMultiplex(args)
+
+        verify(workflow).ack("123")
+    }
+
+
+
+    @Test
     fun `call close all alert like this when args list contains magic string __CLOSE_LIKE_THIS__`(){
         val workflow: Workflow = mock()
         val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow))
@@ -61,7 +77,7 @@ class FlowDeMultiplexerTest {
         val args = listOf("__CLOSE_LIKE_THIS__SOME message of alert that exists 1 times")
 
         whenever(workflow.closeAllLikeThis("SOME message of alert that exists 1 times"))
-            .thenReturn(1)
+            .thenReturn("1: alerts where closed")
 
         unit.deMultiplex(args)
 

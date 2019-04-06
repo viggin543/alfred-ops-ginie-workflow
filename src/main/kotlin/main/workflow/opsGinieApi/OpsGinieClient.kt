@@ -58,7 +58,7 @@ open class OpsGinieClient @Inject constructor(private val cache: Cache) {
                     OpsGinieResponce.serializer(),
                     HttpClient.newHttpClient().send(
                         HttpRequest.newBuilder()
-                            .uri(URI.create("https://api.opsgenie.com/v2/alerts?query=$query&limit=20&sort=createdAt&order=desc"))
+                            .uri(URI.create("https://api.opsgenie.com/v2/alerts?query=$query&limit=200&sort=createdAt&order=desc"))
                             .header("Authorization", "GenieKey $apiKey")
                             .build(), HttpResponse.BodyHandlers.ofString()
                     ).body()

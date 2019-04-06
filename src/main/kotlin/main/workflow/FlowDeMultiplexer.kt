@@ -5,7 +5,7 @@ import main.workflow.alfred.SimpleAlfredItem
 import main.workflow.alfred.SimpleAlfredItems
 import org.reflections.Reflections
 import org.reflections.scanners.MethodAnnotationsScanner
-import org.slf4j.LoggerFactory
+import java.lang.reflect.Method
 
 
 @Target(AnnotationTarget.FUNCTION)
@@ -17,31 +17,20 @@ class FlowDeMultiplexer @Inject constructor(
     private val configurator: WorkFlowConfigurator
 ) {
 
+    private val reflections = Reflections(
+        "main.workflow",
+        MethodAnnotationsScanner()
+    )
+
     fun deMultiplex(args: List<String>): String {
+
+        val modCommand = alfredModCommand(args)
 
         return try {
             when {
                 configurator.isConfigureCommand(args) -> configurator.configure(args)
-
-                shouldCloseSingleAlert(args) ->
-                    workflow.close(
-                        args.last().replace("__CLOSE__", "")
-                    )
-
-                shouldCloseAllAlertsLike(args) ->
-                    "${workflow.closeAllLikeThis(
-                        args.joinToString(separator = " ")
-                            .replace("__CLOSE_LIKE_THIS__", "")
-                    )}: alerts where closed"
-
-                shouldAckAlert(args) -> workflow.ack(
-                    args.joinToString(separator = " ").replace("__ACK_THIS__", "")
-                )
-
-                shouldFilterAlerts(args) ->
-                    workflow.listFilteredAlerts(args).asJsonString()
-
-                else -> workflow.listAlerts().asJsonString()
+                modCommand.isNotEmpty() -> modCommand.first().invoke().toString()
+                else -> workflow.listFilteredAlerts(args).asJsonString()
             }
         } catch (e: AssertionError) {
             SimpleAlfredItems(
@@ -55,15 +44,13 @@ class FlowDeMultiplexer @Inject constructor(
         }
     }
 
-    private fun shouldAckAlert(argsList: List<String>) =
-        !argsList.find { it.contains("__ACK_THIS__") }.isNullOrEmpty()
+    private fun alfredModCommand(args: List<String>): List<() -> Any> {
+        fun Method.getModMagicString() = this.getAnnotation(AlfredMod::class.java).command
+        return reflections.getMethodsAnnotatedWith(AlfredMod::class.java).filter { method ->
+            !args.find { it.contains(method.getModMagicString()) }.isNullOrEmpty()
+        }.map {
+            { it.invoke(workflow, args.last().replace(it.getModMagicString(), "")) }
+        }
+    }
 
-
-    private fun shouldCloseAllAlertsLike(argsList: List<String>) =
-        !argsList.find { it.contains("__CLOSE_LIKE_THIS__") }.isNullOrEmpty()
-
-    private fun shouldFilterAlerts(argsList: List<String>) = argsList.isNotEmpty()
-
-    private fun shouldCloseSingleAlert(argsList: List<String>) =
-        !argsList.find { it.contains("__CLOSE__") }.isNullOrEmpty()
 }

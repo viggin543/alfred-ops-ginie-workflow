@@ -90,7 +90,7 @@ internal class WorkflowTest {
 
         val actual =
             Workflow(opsClient).closeAllLikeThis("Aragorn Loader - At least 1 line failed to parse in adobe loader running in miniprod region - monitor-1-vd-prod")
-        assertEquals(2, actual)
+        assertEquals("2: alerts where closed", actual)
     }
 
     @Test
@@ -137,7 +137,7 @@ internal class WorkflowTest {
 
         val actual =
             Workflow(opsClient).closeAllLikeThis("Unhealthy cluster status in region us-east-1, environment prod - servicedb-1-vj-prod")
-        assertEquals(3, actual)
+        assertEquals("3: alerts where closed", actual)
     }
 
 
@@ -169,7 +169,7 @@ internal class WorkflowTest {
             )
 
         val actual = Workflow(opsClient).closeAllLikeThis("banana")
-        assertEquals(0, actual)
+        assertEquals("0: alerts where closed", actual)
 
 
     }
