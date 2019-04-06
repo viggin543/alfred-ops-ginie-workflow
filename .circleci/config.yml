@@ -5,12 +5,8 @@ jobs:
     docker:
       - image: circleci/openjdk:11.0.2-jdk
     steps:
-      - run: |
-          ls
-          pwd
-          ls ~/project
-          ls ~/code
-          ./gradlew test
+      - checkout
+      - run: gradle test
 
 
 
