@@ -1,4 +1,4 @@
-# Ops Ginie alfred client
+Ops Ginie alfred client
 ---
 ## overview
 this workflow allows
@@ -8,6 +8,7 @@ this workflow allows
     - a note with your user name telling alert was closed will be created
 - closing all alerts like this ( using Levinshtein distance to close alerts which are similar to the selected alert)
 - ack an alert
+- copying alert url to clipboard
 - opening selected alert in browser
 
 ![](.README_images/main_view.png)
@@ -17,15 +18,47 @@ this workflow allows
 in order to use the workflow three parameters
 - ops ginie user
     - example igor@banana.com
-    - ![](.README_images/d0e0917d.png)
+    - ![](.README_images/configureUSer.png)
 - ops ginie secret (api key)
     - [ops ginie keys configuration](https://docs.opsgenie.com/docs/api-key-management)
+    ![](.README_images/confsecret.png)
 - ops ginie query
     - example 
     ```
     (status: open AND teams: ("banana" OR "banana_counting")) OR (status: open AND owner: (igor@banana.com OR boris@banana.com ))
     ```
+    ![](.README_images/confQuery.png)
     [using ops ginie query language](https://docs.opsgenie.com/docs/alerts-search-query-help)
+
+---
+### listing alerts
+![](.README_images/listAlerts.png)
+selecting an alert and pressing `tab` will filter out other alerts 
+
+### filtering alserts
+![](.README_images/filterAlerts.png)
+this filtered out all alerts that does not contain `banana` in their message
+
+### opening alert in browser
+select an alert and press enter
+
+### copy alert url to clipboard
+select url and press `ctrl-c`
+
+### close alert
+select alert -  press `cmd` and press then `enter`
+### close similar alerts
+in case you have a ton of alerts with almost the same name
+this can happen if every instance fires and alert and you have many instances
+(its a bad sign and better refactor the alert mechanism to send the alert only once)
+
+select alert, press `shift` and then enter.
+this will close all the alerts that have a Levinshein distance < 8 from the alert you selected
+
+### ack alert
+select alert, press `option` and then enter
+ 
+
 
 
 
