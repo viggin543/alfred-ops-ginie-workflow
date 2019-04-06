@@ -13,6 +13,10 @@ this workflow allows
 
 ![](.README_images/main_view.png)
 
+## dependencies
+- jdk11
+     - make sure `/usr/libexec/java_home -v 11` prints `/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home`
+     ( or any other directory with the jdk )
 
 ## configuration
 in order to use the workflow three parameters
@@ -57,12 +61,18 @@ this will close all the alerts that have a Levinshein distance < 8 from the aler
 
 ### ack alert
 select alert, press `option` and then enter
- 
 
 
-
+### logging
+workflow writes his logs to `workflow.log`
+in workflow work dir
+![](.README_images/openworkdir.png)
 
 ## backlog
 - assigning an alert
 - selecting user basing on existing ops ginie users
+ 
+ 
+ ## maintenance
+ i can be found: domrevigor@gmail.com
  
