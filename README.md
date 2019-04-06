@@ -1,5 +1,8 @@
 Ops Ginie alfred client
 ---
+
+[![CircleCI](https://circleci.com/gh/viggin543/alfred-ops-ginie-workflow.svg?style=svg)](https://circleci.com/gh/viggin543/alfred-ops-ginie-workflow)
+
 ## overview
 this workflow allows
 - listing alerts
