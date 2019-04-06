@@ -11,7 +11,7 @@ import kotlin.test.Test
 
 class FlowDeMultiplexerTest {
 
-    val reflections =          Reflections(
+    private val reflections =  Reflections(
         "main.workflow",
         MethodAnnotationsScanner()
     )

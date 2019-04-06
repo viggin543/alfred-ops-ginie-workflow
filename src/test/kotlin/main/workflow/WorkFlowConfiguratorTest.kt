@@ -8,7 +8,7 @@ import kotlin.test.assertFalse
 
 internal class WorkFlowConfiguratorTest {
 
-    val reflections =          Reflections(
+    private val reflections = Reflections(
         "main.workflow",
         MethodAnnotationsScanner()
     )
