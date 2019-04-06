@@ -6,8 +6,8 @@ jobs:
       - run: |
           ls
           echo wat
-          ls ..
-          ../gradlew test
+          ls ../project
+          gradle test
 
 
 
