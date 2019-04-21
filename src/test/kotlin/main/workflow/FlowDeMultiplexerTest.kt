@@ -3,7 +3,7 @@ package main.workflow
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
-import main.workflow.alfred.AlfredItems
+import viggin543.alfred.workflow.*
 import org.reflections.Reflections
 import org.reflections.scanners.MethodAnnotationsScanner
 import kotlin.test.Test

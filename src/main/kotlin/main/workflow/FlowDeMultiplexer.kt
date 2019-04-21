@@ -1,9 +1,9 @@
 package main.workflow
 
 import com.google.inject.Inject
-import main.workflow.alfred.SimpleAlfredItem
-import main.workflow.alfred.SimpleAlfredItems
 import org.reflections.Reflections
+import viggin543.alfred.workflow.SimpleAlfredItem
+import viggin543.alfred.workflow.SimpleAlfredItems
 import java.lang.reflect.Method
 
 

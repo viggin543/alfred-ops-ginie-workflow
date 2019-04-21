@@ -2,8 +2,8 @@ package main.workflow
 
 import com.google.inject.Inject
 import kotlinx.serialization.toUtf8Bytes
-import main.workflow.alfred.*
 import main.workflow.opsGinieApi.Alert
+import viggin543.alfred.workflow.*
 import main.workflow.opsGinieApi.OpsGinieClient
 import org.apache.commons.text.similarity.LevenshteinDistance
 
