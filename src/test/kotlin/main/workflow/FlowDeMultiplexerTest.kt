@@ -7,6 +7,7 @@ import viggin543.alfred.workflow.*
 import org.reflections.Reflections
 import org.reflections.scanners.MethodAnnotationsScanner
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 
 class FlowDeMultiplexerTest {
@@ -72,6 +73,22 @@ class FlowDeMultiplexerTest {
         unit.deMultiplex(args)
 
         verify(workflow).ack("123")
+    }
+
+
+    @Test
+    fun extractArgs(){
+        val workflow: Workflow = mock()
+        val unit = FlowDeMultiplexer(workflow,WorkFlowConfigurator(workflow,reflections),reflections)
+        val actual = unit.extractArgs(
+            listOf("__CLOSE_LIKE_THIS__[PPP]","-","[XXX]","xxx","yyy","-","asd","111","banana"),
+            "__CLOSE_LIKE_THIS__"
+        )
+
+        assertEquals(actual,"[PPP] - [XXX] xxx yyy - asd 111 banana")
+
+
+
     }
 
 

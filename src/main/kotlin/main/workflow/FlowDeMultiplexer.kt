@@ -2,6 +2,7 @@ package main.workflow
 
 import com.google.inject.Inject
 import org.reflections.Reflections
+import org.slf4j.LoggerFactory
 import viggin543.alfred.workflow.SimpleAlfredItem
 import viggin543.alfred.workflow.SimpleAlfredItems
 import java.lang.reflect.Method
@@ -16,6 +17,9 @@ class FlowDeMultiplexer @Inject constructor(
     private val configurator: WorkFlowConfigurator,
     private val reflections : Reflections
 ) {
+
+    private val log = LoggerFactory.getLogger(App::class.java)!!
+
 
     fun deMultiplex(args: List<String>): String {
 
@@ -39,12 +43,19 @@ class FlowDeMultiplexer @Inject constructor(
         }
     }
 
+
     private fun alfredModCommand(args: List<String>): List<() -> Any> {
         fun Method.getModMagicString() = this.getAnnotation(AlfredMod::class.java).command
         return reflections.getMethodsAnnotatedWith(AlfredMod::class.java).filter { method ->
             args.find { it.contains(method.getModMagicString()) }?.isNotEmpty() ?: false
         }.map {
-            { it.invoke(workflow, args.last().replace(it.getModMagicString(), "")) }
+            { it.invoke(workflow, extractArgs(args, it.getModMagicString())) }
         }
+    }
+
+    fun extractArgs(args: List<String>, methodAnnotation: String): String {
+        val argument = args.reduce { x, y -> "$x $y" }.removePrefix(methodAnnotation)
+        log.info("workflow argument: $argument, made from $args")
+        return argument
     }
 }
